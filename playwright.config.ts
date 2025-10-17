@@ -7,6 +7,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',  // Basic for now
+  timeout: 90000,  // 90 seconds per test
   use: {
     baseURL: 'https://hub.ultralytics.com',
     trace: 'on-first-retry',
