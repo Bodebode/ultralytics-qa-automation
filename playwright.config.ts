@@ -6,8 +6,15 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',  // Basic for now
-  timeout: 90000,  // 90 seconds per test
+  timeout: 90_000, // 90 seconds per test
+  reporter: [
+    ['html'],
+    ['allure-playwright', {
+      outputFolder: 'allure-results',
+      detail: true,
+      suiteTitle: true,
+    }]
+  ],
   use: {
     baseURL: 'https://hub.ultralytics.com',
     trace: 'on-first-retry',
@@ -17,3 +24,4 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
 });
+

@@ -1,0 +1,50 @@
+✅ Login successful
+✅ Navigated to Train page
+
+========== STARTING TRAIN MODEL WORKFLOW ==========
+
+✅ Train Model modal opened
+
+--- Step 1: Dataset Selection ---
+Found search input, filling with "Test Coco8"...
+✅ Dataset "Test Coco8" selected
+✅ Clicked Continue from dataset selection
+
+--- Step 2: Model Configuration ---
+✅ Model name filled: Test Model
+✅ Selected YOLO11s variant
+Found Advanced Model Configuration...
+Advanced Model Configuration already expanded
+⚠️ Epochs field not visible, skipping...
+✅ Clicked Continue from model configuration
+
+--- Step 3: Training (BYO Agent) ---
+✅ Reached Step 3 of 3
+Found "Bring your own agent" tab, clicking...
+✅ Clicked "Bring your own agent" tab
+⚠️ Some training instructions may not be visible
+
+========== PYTHON TRAINING CODE ==========
+from ultralytics import YOLO, checks, hub
+checks()
+
+hub.login('7a03b31e9840e0ff0e79fbbba0fe62a23aee75c294')
+
+model = YOLO('https://hub.ultralytics.com/models/4xf4AXlAk9EvnwqMALKh')
+results = model.train()
+==========================================
+
+
+✅ TRAIN MODEL WORKFLOW COMPLETED SUCCESSFULLY
+   ✓ Step 1: Dataset selection (Test Coco8)
+   ✓ Step 2: Model configuration (Test Model, YOLO11s)
+   ✓ Step 3: BYO Agent training page reached
+   ✓ Training instructions displayed
+   ✓ Python code available for execution
+
+ℹ️ NOTE: Actual Python training execution is not performed in automated tests
+ℹ️ To run actual training, execute the Python code shown above
+
+========== WORKFLOW COMPLETE ==========
+
+✅ Train Model test completed successfully

@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3419","smoke: login to dashboard","chromium","2025-10-17","passed","2025-10-17","","example.spec.ts","",""
+"","10505","upload coco8 and verify","chromium","2025-10-17","passed","2025-10-17","Scenario 1: Upload Dataset","test-upload-dataset.spec.ts","",""
+"","17625","should complete train model workflow with BYO Agent","chromium","2025-10-17","passed","2025-10-17","Scenario 2: Train Model","test-train-model.spec.ts","",""
+"","1","should execute actual training with Python","chromium","2025-10-17","skipped","2025-10-17","Scenario 2: Train Model","test-train-model.spec.ts","",""
